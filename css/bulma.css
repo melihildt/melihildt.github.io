@@ -22,13 +22,17 @@
 
 
 /* Agregados por mi*/
-.color {
-  background-color: rgba(255,255,255,0.30);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.container.whitespace {
+  padding: 3%;
+}
+
+.pruebaImagen:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: linear-gradient(to bottom, #fadc8c4c, #e4727566 37%, #6d557199 72%, #3a496f), linear-gradient(#ffffff4c, #ffffff4c);
 }
 
 .case-card {
@@ -7755,7 +7759,25 @@ label.panel-block:hover {
   margin-left: 100%;
 }
 
+
 @media screen and (max-width: 768px) {
+  .column.margen-mobile {
+    margin: 5% 1.5%;
+  }
+
+  .rectangulo-itr.mobile {
+    margin: 6% 3%;
+    padding: 6%;
+  }
+
+  .column.mobileCostados {
+    margin: 0% 6%;
+  }
+
+  .container.whitespace {
+    padding: 8%;
+  }
+
   .column.is-narrow-mobile {
     flex: none;
   }
@@ -9808,4 +9830,3 @@ label.panel-block:hover {
   background-color: #fadc8c;
   padding: 3rem 1.5rem 2rem;
 }
-/*# sourceMappingURL=bulma.css.map */

@@ -42,11 +42,14 @@
                                 <div class="column is-5 is-offset-1">
                                         <a href="mailto: melisahildt@me.com" class="title is-4 has-text-weight-semibold" style="line-height: 180%">E-mail / </a>
                                         <a href="https://www.linkedin.com/in/melisahildt/" class="title is-4 has-text-weight-semibold" style="line-height: 180%">Linkedin</a>
-                                        <p class="is-size-7" style="line-height: 140%;">I'm currently developing a better version of this site using Jekyll and correcting some stuff but it's taking me a while I clean and optimize the code however the contents are the same, hope you enjoy it!</p>
+                                        <p class="is-size-7" style="line-height: 140%;">I'm currently developing a better version of this site and correcting some stuff but it's taking me a while I clean and optimize the code however the contents are the same, hope you enjoy it!</p>
                                 </div>
                         </div>
                 </div>
         </footer>
+        {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+        {% endif %}
 </body>
 
 
