@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
 <head>
-   <meta http-equiv="content-type" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-   <title>{{ page.title }}</title>
-
-   <!-- Homepage CSS -->
-   <link rel="stylesheet" href="/css/bulma.css" type="text/css" />
-
-   <!-- Typekit -->
-   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-   <script  type="text/javascript" src="/toggle.js"></script>
+	<meta http-equiv="content-type" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>{{ page.title }}</title>
+	<!-- Homepage CSS -->
+	<link rel="stylesheet" href="/css/bulma.css" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico" >
+	<!-- Typekit -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script type="text/javascript" src="/toggle.js"></script>
 </head>
+
 <body>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item is-5 has-text-weight-semibold is-hidden" href="index.html">Melisa Hildt</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-default">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div id="navbar-default" class="navbar-menu">
+			<div class="navbar-end">
+				<a class="navbar-item is-link is-5 has-text-weight-semibold" href="index.html">Home</a>
+				<a class="navbar-item is-link is-5 has-text-weight-semibold" href="about.html">About me</a>
+				<a class="navbar-item is-link is-5 has-text-weight-semibold" href="portfolio.html">Portfolio</a>
+				<a class="navbar-item is-link is-5 has-text-weight-semibold" href="experience.html">Experience</a>
+			</div>
+	</nav>
 
+	{{ content }}
 
-                        <nav class="navbar">
-                                <div class="navbar-brand">
-                                <a class="navbar-item is-5 has-text-weight-semibold is-hidden" href="index.html">Melisa Hildt</a>
-                                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-default">
-                                        <span aria-hidden="true"></span>
-                                        <span aria-hidden="true"></span>
-                                        <span aria-hidden="true"></span></a>
-                                </div>
-                                <div id="navbar-default" class="navbar-menu">
-                                <div class="navbar-end">
-                                <a class="navbar-item is-link is-5 has-text-weight-semibold" href="index.html">Home</a>
-                                <a class="navbar-item is-link is-5 has-text-weight-semibold" href="about.html">About me</a>
-                                <a class="navbar-item is-link is-5 has-text-weight-semibold" href="portfolio.html">Portfolio</a>
-                                <a class="navbar-item is-link is-5 has-text-weight-semibold" href="experience.html">Experience</a>
-                                </div>
-                        </nav>
-        
-              {{ content }}
-
-        <footer class="footer">
-                <div class="container" style="margin-left: 0">
-                        <div class="columns">
-                                <div class="column is-6">
-                                        <h1 class="title is-size-1" style="font-family: 'Playfair Display', serif;">Contact.</h1>
-                                </div>
-                                <div class="column is-5 is-offset-1">
-                                        <a href="mailto: melisahildt@me.com" class="title is-4 has-text-weight-semibold" style="line-height: 180%">E-mail / </a>
-                                        <a href="https://www.linkedin.com/in/melisahildt/" class="title is-4 has-text-weight-semibold" style="line-height: 180%">Linkedin</a>
-                                        <p class="is-size-7" style="line-height: 140%;">I'm currently developing a better version of this site and correcting some stuff but it's taking me a while I clean and optimize the code however the contents are the same, hope you enjoy it!</p>
-                                </div>
-                        </div>
-                </div>
-        </footer>
-        {% if jekyll.environment == 'production' %}
-        {% include analytics.html %}
-        {% endif %}
+	<footer class="footer">
+		<div class="container" style="margin-left: 0">
+			<div class="columns">
+				<div class="column is-6">
+					<h1 class="title is-size-1" style="font-family: 'Playfair Display', serif;">Contact.</h1>
+				</div>
+				<div class="column is-5 is-offset-1">
+					<a href="mailto: melisahildt@me.com" class="title is-4 has-text-weight-semibold" style="line-height: 180%">E-mail / </a>
+					<a href="https://www.linkedin.com/in/melisahildt/" class="title is-4 has-text-weight-semibold" style="line-height: 180%">Linkedin</a>
+					<p class="is-size-7" style="line-height: 140%;">I'm currently developing a better version of this site and correcting some stuff but it's taking me a while I clean
+						and optimize the code however the contents are the same. If you have any suggestions you can write me :)</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	{% if jekyll.environment == 'production' %} {% include analytics.html %} {% endif %}
 </body>
-
-
